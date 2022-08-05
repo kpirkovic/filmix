@@ -6,10 +6,10 @@ session_start();
 require_once('connection.php');
 
 // define site path
-define('DIR','http://localhost/phpKristijanPirkovic/');
+define('DIR','https://filmix-movies.herokuapp.com/');
 
 // define admin site path
-define('DIRADMIN','http://localhost/phpKristijanPirkovic/admin/');
+define('DIRADMIN','https://filmix-movies.herokuapp.com/admin/');
 
 // define site title for top of the browser
 define('SITETITLE','Filmx');
