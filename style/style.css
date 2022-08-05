@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&family=Racing+Sans+One&family=Roboto:wght@100&display=swap');
+body {
+    display: none;
+    background-color: rgb(18, 18, 18) !important;
+    color: white !important;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    font-family: 'Poppins', sans-serif !important;
+}
+.brand {
+    font-family: 'Racing Sans One', cursive !important;
+}
+.fs-2x5 {
+    font-size: 2.25rem;
+}
+.login-box {
+    background-color: rgb(23, 23, 23, 1);
+    border: 1px solid rgb(40, 40, 40);
+}
+.fs-login{
+    font-size: 5.5rem;
+    letter-spacing: 3px;
+}
+nav {
+    transition: all 300ms ease;
+}
+nav a{
+    height: 2.5rem;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.logo {
+    transition: all 300ms ease;
+}
+ul {
+    list-style: none;
+}
+td {
+    color: white !important;
+    vertical-align: middle;
+}
+label {
+    margin-bottom: .5rem;
+}
+tbody > tr {
+    border-color: rgba(255, 255, 255, 0.1) !important;
+}
+thead {
+    color: white !important;
+    border-color: rgba(255, 255, 255, 0.8) !important;
+}
+.dark-sidebar {
+    background-color: rgb(23, 23, 23) !important;
+    z-index: 999;
+    font-size: 1.05rem;
+    background-color: rgb(23, 23, 23, 1);
+    border-inline-end: 1px solid rgb(40, 40, 40);
+    flex: 0 0 auto;
+}
+.sidebar-btn {
+    transition: all 200ms ease;
+}
+.sidebar-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+.popup-box {
+    position: absolute !important;
+    top: 5%;
+    left: 50%;
+    display: block;
+    transform: scale(1) translateX(-50%) !important;
+    transform-origin: left;
+    animation: animateIn 1.5s forwards ease;
+    z-index: 999;
+    user-select: none;
+}
+.w-15 {
+    width: 12rem;
+}
+.dashboard-container {
+    flex-grow: 1;
+    padding: 3rem;
+    overflow-y: scroll;
+}
+.fs-7 {
+    font-size: .9rem;
+    padding: .35rem .65rem !important;
+}
+.btn-info:hover {
+    box-shadow: 0px 0px 10px rgb(48, 185, 219, .3);
+}
+.collapse-nav {
+    position: absolute;
+    top: 10%;
+    right: calc(0% - .7rem);
+    font-size: 1.55rem;  
+    cursor: pointer;
+    transition: transform 200ms ease;
+}
+input[type='submit'] {
+    margin-inline-end: .5rem;
+}
+textarea:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="time"]:focus,
+input[type="week"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="color"]:focus,   
+input[type="checkbox"]:focus{   
+  border-color: var(--bs-info);
+  box-shadow: rgba(255, 255, 255, 0.2);
+  outline: 0 none;
+}
+.form-check-input:checked{   
+  border-color: var(--bs-info) !important;
+  box-shadow: rgba(255, 255, 255, 0.2) !important;
+  background-color: var(--bs-info) !important;
+}
+
+.dashboard-container::-webkit-scrollbar {
+    width: .7rem;
+}
+
+.dashboard-container::-webkit-scrollbar-track {
+    background: #ffffff17;
+    width: .7rem;
+}
+
+.dashboard-container::-webkit-scrollbar-thumb {
+    background-color: var(--bs-white);
+    border-radius: 3px;
+}
+input[type='file']{
+    display: none;
+}
+.file_upload {
+    aspect-ratio: 1/1;
+    width: 10.5rem;
+    border: .2rem dashed var(--bs-white);
+}
+.file_upload label {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+#file_upload_img {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+}
+.file_upload::before {
+    content: 'Click Here To \A Upload an Image';
+    display: flex;
+    white-space: pre;
+    text-align: center;
+    line-height: 125%;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    transition: opacity 200ms ease;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    background-color: rgb(0, 0, 0, .55);
+    pointer-events: none;
+}
+.file_upload:hover::before {
+    opacity: 0;
+}
+@keyframes animateIn {
+    0% {
+        opacity: 0;
+        transform: scale(0) translateX(-50%);
+    }
+    35% {
+        opacity: 1;
+        transform: scale(1) translateX(-50%);
+    }
+    75% {
+        opacity: 1;
+        transform: scale(1) translateX(-50%);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(0) translateX(-50%);
+    }
+}
+::selection {
+    background-color: var(--bs-info);
+    color: var(--bs-dark);
+}
