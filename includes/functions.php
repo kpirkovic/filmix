@@ -95,7 +95,7 @@ function deleteGenre($connection, $genreID)
 function deleteMovies($connection, $movie_id)
 {
     $delpage = mysqli_real_escape_string($connection, $movie_id);
-    $img_dir = $_SERVER['DOCUMENT_ROOT'] . '/phpKristijanPirkovic/Images/movies';
+    $img_dir = DIR . '/Images/movies';
     $delImg = unlink($img_dir . '/' . mysqli_fetch_assoc(mysqli_query($connection,"SELECT * FROM movies WHERE moviesID = '$delpage'"))['Img']);
     $sql = mysqli_query($connection,"DELETE FROM movies WHERE moviesID = '$delpage'");
     $_SESSION['success'] = "Movie Deleted";
@@ -106,7 +106,7 @@ function deleteDirector($connection, $director_id)
 {
     $delpage = mysqli_real_escape_string($connection, $director_id);
     //Image Directory
-    $img_dir = $_SERVER['DOCUMENT_ROOT'] . '/phpKristijanPirkovic/Images/directors';
+    $img_dir = DIR . '/Images/directors';
     //Delete Image From Folder and Database
     $delImg = unlink($img_dir . '/' . mysqli_fetch_assoc(mysqli_query($connection,"SELECT * FROM directors WHERE directorsID = '$delpage'"))['Img']);
     $sql = mysqli_query($connection,"DELETE FROM directors WHERE directorsID = '$delpage'");
